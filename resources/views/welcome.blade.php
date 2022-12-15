@@ -5,13 +5,11 @@
 @section('content')
 
 
-<h1>Teste</h1>
+<h1>Welcome!</h1>
 
-@foreach($produtos as $produto)
+<P>para inserir entradas e saidas de produtos precisa antes criar o produto e o funcionario</P>
 
-    <p>{{ $produto->name }}</p>
-    <p>{{ $produto->preco_custo }}</p>
-    <p>{{ $produto->preco_venda }}</p>
+<P>Obrigado</P>
 
 @endforeach
 

@@ -24,15 +24,15 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brnd">
-                        <img src="/img/logo_raposa.png" alt="HDC Events">
-                        FoxEvents
+                        
+                        
                     </a>
                     <ul class="navbar-nav">                        
                         <li class="nav-item">
                             <a href="/products/productsList" class="nav-link">Produtos</a>                            
                         </li>
                         <li class="nav-item">
-                            <a href="/usuario/usuarioList" class="nav-link">Usuarios</a>                             
+                            <a href="/usuario/usuarioList" class="nav-link">funcionarios</a>                             
                         </li>
                         <li class="nav-item">
                             <a href="/entrada/EntProdutoList" class="nav-link">Entrada de produtos</a>                             
@@ -40,28 +40,7 @@
                         <li class="nav-item">
                             <a href="/saida/SaidaProdutoList" class="nav-link">saida de produtos</a>                             
                         </li>
-                        @auth
-                            <li class="nav-item">
-                                <a href="/dashboard" class="nav-link">Relatorio</a>                            
-                            </li>
-                            <li class="nav-item">
-                               <form action="/logout" method="post">
-                                @csrf
-                                <a href="/logout" 
-                                class="nav-link"
-                                onclick="event.preventDefault();
-                                this.closest('form').submit();">Sair</a>
-                               </form>                           
-                            </li>
-                        @endauth
-                        @guest
-                        <li class="nav-item">
-                            <a href="/login" class="nav-link">Entrar</a>                            
-                        </li>
-                        <li class="nav-item">
-                            <a href="/register" class="nav-link">cadastrar</a>                            
-                        </li>
-                        @endguest
+                        
                     </ul>                   
                 </div>
             </nav>
