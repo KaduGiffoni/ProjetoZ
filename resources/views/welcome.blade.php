@@ -11,6 +11,5 @@
 
 <P>Obrigado</P>
 
-@endforeach
 
 @endsection
