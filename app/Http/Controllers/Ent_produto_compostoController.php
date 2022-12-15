@@ -8,6 +8,11 @@ use App\Ent_produto_composto;
 use App\Usuario;
 use App\produto;
 
+
+/**não consegui completar os produtos compostos
+ * preciso estudar mais um pouco.
+*/
+
 class Ent_produto_compostoController extends Controller
 {
     public function create(){

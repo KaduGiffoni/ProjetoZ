@@ -18,8 +18,8 @@
                 </select>
             </div>
             <div class="form-goup">
-                <label for="date">Data de chegada</label>
-                <input type="date" class="form-control" id="date" name="dataEntrada">
+                <label for="date">Data de Saida</label>
+                <input type="date" class="form-control" id="date" name="dataSaida">
             </div>
             <div class="form-goup">
                 <label for="title">Valor de venda</label>

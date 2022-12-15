@@ -16,7 +16,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">data entrada</th>
+                    <th scope="col">data Saida</th>
                     <th scope="col">quantidade</th>
                     <th scope="col">Preço de custo</th>
 
@@ -27,7 +27,7 @@
                     <tr>
                         <td scope="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/entrada/{{ $Saida_produto->id }}">{{ $Saida_produto->name }}</a></td>
-                        <td>{{ $Saida_produto->data_entrada }}</td>
+                        <td>{{ $Saida_produto->data_saida }}</td>
                         <td>{{ $Saida_produto->quantidade }}</td>
                         <td>R${{ $Saida_produto->valor_total}}</td>                                               
                     </tr>

@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Ent_produto_composto extends Model
 {
     public function produtos(){
-        return $this->belongsTo('App\Produtos');
+        return $this->belongsToMany('App\Produtos');
     }
 }

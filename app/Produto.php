@@ -21,7 +21,7 @@ class Produto extends Model
     }
 
     public function ent_produtos_compostos(){
-        return $this->hasMany('App\Ent_produto_composto');
+        return $this->belongsToMany('App\Ent_produto_composto');
     }
 }
 

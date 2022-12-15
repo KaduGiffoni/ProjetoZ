@@ -4,20 +4,21 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddProdutoIdToEntProdutosTable extends Migration
+class CreateProdutoCompostoTable extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-
-     //Adicionando a chave estrangeira a ent_produtos
     public function up()
     {
-        Schema::table('ent_produtos', function (Blueprint $table) {
+        Schema::create('produto_composto', function (Blueprint $table) {
             $table->integer('produto_id')->unsigned();
             $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('cascade');
+            $table->integer('produto_composto_id')->unsigned();
+            $table->foreign('produto_composto_id')->references('id')->on('ent_produtos_compostos');
+            $table->timestamps();
         });
     }
 
@@ -28,8 +29,6 @@ class AddProdutoIdToEntProdutosTable extends Migration
      */
     public function down()
     {
-        Schema::table('ent_produtos', function (Blueprint $table) {
-            $table->foreign('produto_id')->references('id')->on('produtos')->onDelete('cascade');
-        });
+        Schema::dropIfExists('produto_composto');
     }
 }

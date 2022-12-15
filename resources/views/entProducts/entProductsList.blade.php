@@ -40,7 +40,7 @@
                         <td scope="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/entrada/{{ $Ent_produto->id }}">{{ $Ent_produto->name }}</a></td>
                         <td>{{ $Ent_produto->data_entrada }}</td>
-                        <td>{{ $Ent_produto->preco_custo }}</td>
+                        <td>R${{ $Ent_produto->preco_custo }}</td>
                         <td>
                             <a href="/produto/edit/{{ $Ent_produto->id }}" class="btn btn-info edit-btn"><ionicon name="create-outline"></ionicon>Editar</a>
                             <form action="/produto/{{ $Ent_produto->id }}" method="POST">

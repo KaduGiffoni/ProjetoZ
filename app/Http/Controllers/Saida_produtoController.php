@@ -27,7 +27,7 @@ class Saida_produtoController extends Controller
         $data = $request->all();
         $Saida_produto = new Saida_produto;                              
         $Saida_produto->produto_id = $request->name;
-        $Saida_produto->data_entrada = $request->dataEntrada;
+        $Saida_produto->data_saida = $request->dataSaida;
         $Saida_produto->preco_venda = $request->preco_venda;
         $Saida_produto->quantidade = $request->quantidade;
         $Saida_produto->funcionario = $request->funcionario;

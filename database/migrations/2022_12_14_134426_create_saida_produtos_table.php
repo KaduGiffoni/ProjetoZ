@@ -18,7 +18,7 @@ class CreateSaidaProdutosTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->float('preco_venda');
-            $table->date('data_entrada');
+            $table->date('data_saida');
             $table->integer('quantidade');
             $table->string('funcionario');
             $table->float('valor_total');

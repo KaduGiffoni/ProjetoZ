@@ -27,7 +27,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">data entrada</th>
+                    <th scope="col">data saida</th>
                     <th scope="col">Preço de venda</th>
                     <th scope="col">Ações</th>
 
@@ -38,8 +38,8 @@
                     <tr>
                         <td scope="row">{{ $loop->index + 1 }}</td>
                         <td><a href="/entrada/{{ $Saida_produto->id }}">{{ $Saida_produto->name }}</a></td>
-                        <td>{{ $Saida_produto->data_entrada }}</td>
-                        <td>{{ $Saida_produto->preco_venda }}</td>
+                        <td>{{ $Saida_produto->data_saida }}</td>
+                        <td>R${{ $Saida_produto->preco_venda }}</td>
                         <td>
                             <a href="/produto/edit/{{ $Saida_produto->id }}" class="btn btn-info edit-btn"><ionicon name="create-outline"></ionicon>Editar</a>
                             <form action="/produto/{{ $Saida_produto->id }}" method="POST">
