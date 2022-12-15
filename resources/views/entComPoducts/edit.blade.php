@@ -15,9 +15,19 @@
                 <input type="text" class="form-control" id="title" name="name" value="{{ $produto->name }}">
             </div>
             <div class="form-goup">
+                <label for="date">Data de chegada</label>
+                <input type="date" class="form-control" id="date" name="data_entrada" value="">
+            </div>
+            <div class="form-goup">
+                <label for="title">Valor de custo</label>
+                <input type="number" class="form-control" step="0.01" name="preco_custo" min="0.01" value="{{ $produto->preco_custo}}">
+            </div>
+            <div class="form-goup">
                 <label for="title">quantidade</label>
                 <input type="number" class="form-control" step="1" name="quantidade" min="1" value="{{ $produto->quantidade}}">
-            </div>           
+            </div>
+
+            
             
             <input type="submit" class = "btn btn-primary" value="Editar produto">
         </form>

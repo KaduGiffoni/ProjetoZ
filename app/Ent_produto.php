@@ -4,11 +4,13 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+
+class Ent_produto extends Model
 {
+
     protected $guarded = [];
 
     public function produtos(){
-        return $this->hasMany('App\Produto');
+        return $this->belongsTo('App\Produtos');
     }
 }

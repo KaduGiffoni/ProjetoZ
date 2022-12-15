@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use App\Usuario;
 
 class StoreController extends Controller
 {
@@ -14,7 +15,8 @@ class StoreController extends Controller
     }
 
     public function create(){
-        return view('products.create');
+        $usuarios = Usuario::all();
+        return view('products.create', ['usuarios' => $usuarios]);
     }
 
     public function productsList(){
@@ -25,14 +27,13 @@ class StoreController extends Controller
     
     public function store(Request $request){
         $produto = new Produto;
-        
         $produto->name = $request->name;
-        $produto->data_entrada = $request->dataEntrada;
-        $produto->preco_custo = $request->preco_custo;
-        $produto->preco_venda = $request->preco_venda;
-        $produto->quantidade = $request->quantidade;
+        $produto->quantidade = 0;
 
         $produto->save();
+
+        
+        
 
         return redirect('/products/productsList')->with('msg', 'Produto cadastrado com sucesso');
     }

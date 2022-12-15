@@ -34,6 +34,12 @@
                         <li class="nav-item">
                             <a href="/usuario/usuarioList" class="nav-link">Usuarios</a>                             
                         </li>
+                        <li class="nav-item">
+                            <a href="/entrada/EntProdutoList" class="nav-link">Entrada de produtos</a>                             
+                        </li>
+                        <li class="nav-item">
+                            <a href="/saida/SaidaProdutoList" class="nav-link">saida de produtos</a>                             
+                        </li>
                         @auth
                             <li class="nav-item">
                                 <a href="/dashboard" class="nav-link">Relatorio</a>                            
